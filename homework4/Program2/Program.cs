@@ -8,11 +8,13 @@ namespace Program2
 {
     class Program
     {
-        class Order
+        class Order     //声明货物编号，价格，名字
         {
-            public int GoodsNumber, GoodsPrice;
+            public int GoodsNumber;
+            public int GoodsPrice;
             public string GoodsName;
         }
+        //用list存储货物信息
         class OrderDetails
         {
             public static List<Order> Orders;
@@ -27,6 +29,7 @@ namespace Program2
             {
                 Orders = new List<Order>();
             }
+            //订单信息
             public static Order Information()
             {
                 Order myGoods = new Order();
@@ -40,6 +43,8 @@ namespace Program2
 
                 return myGoods;
             }
+
+
             public void ShowGoodsInformation(Order myGoods)
             {
                 if (myGoods == null) return;
@@ -49,6 +54,9 @@ namespace Program2
                 Console.WriteLine("Price:{0}", myGoods.GoodsPrice);
                 Console.WriteLine();
             }
+
+
+
             public Order SearchByNum(int GoodsNumber)
             {
                 for (int i = 0; i < Orders.Count; i++)
@@ -60,6 +68,9 @@ namespace Program2
                 }
                 return null;
             }
+
+
+
             public void AddGoods(Order myGoods)
             {
                 if (myGoods != null)
@@ -83,6 +94,7 @@ namespace Program2
                     Console.WriteLine("Please check your information");
             }
         }
+        //订单服务
         class OrderService
         {
             public void Check()
@@ -124,6 +136,9 @@ namespace Program2
                 } while (true);
             }
         }
+
+
+
         class Program2
         {
             public static void Main(string[] args)
