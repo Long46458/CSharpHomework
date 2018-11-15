@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OrderWinForm.Properties
+namespace WinForm.Properties
 {
 
 
